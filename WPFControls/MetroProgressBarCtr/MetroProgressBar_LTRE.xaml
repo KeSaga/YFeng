@@ -1,0 +1,214 @@
+﻿<UserControl x:Class="WPFControls.MetroProgressBarCtr.MetroProgressBar_LTRE"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFControls.MetroProgressBarCtr.ValueConverters"
+             mc:Ignorable="d"
+             Height="300" Width="300"
+             Name="metroProgressBar"
+             >
+
+    <UserControl.Resources>
+        <local:LTRE_MarginConverter x:Key="marginConverter"></local:LTRE_MarginConverter>
+        <local:LTRE_KeyFrameConverter x:Key="keyFrameConverter"></local:LTRE_KeyFrameConverter>
+        <Storyboard Name="ellipseStoryLeftToRight" x:Key="StoryLeftToRight" RepeatBehavior="Forever">
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00"  Storyboard.TargetName="e1" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval,Converter={StaticResource keyFrameConverter}, ConverterParameter=0}"
+                    Value="{Binding ElementName=e1, Path=Margin}"/>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=0}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_Start" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=1}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleLeft" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=3}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleRight" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=4}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_End" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="e2" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval,Converter={StaticResource keyFrameConverter}, ConverterParameter=0.4}"
+                    Value="{Binding ElementName=e2, Path=Margin}"/>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=0.4}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_Start" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=1.4}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleLeft" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=3.4}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleRight" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=4.4}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_End" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="e3" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval,Converter={StaticResource keyFrameConverter}, ConverterParameter=0.8}"
+                    Value="{Binding ElementName=e3, Path=Margin}"/>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=0.8}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_Start" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=1.8}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleLeft" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=3.8}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleRight" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=4.8}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_End" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="e4" Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval,Converter={StaticResource keyFrameConverter}, ConverterParameter=1.2}"
+                    Value="{Binding ElementName=e4, Path=Margin}"/>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=1.2}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_Start" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=2.2}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleLeft" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=4.2}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_MiddleRight" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+                <SplineThicknessKeyFrame KeyTime="{Binding Path=TimeInterval, Converter={StaticResource keyFrameConverter}, ConverterParameter=5.2}">
+                    <SplineThicknessKeyFrame.Value>
+                        <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                            <Binding Path="ActualWidth"></Binding>
+                            <Binding Path="MarginConvertRatio_End" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </SplineThicknessKeyFrame.Value>
+                </SplineThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded" SourceName="metroProgressBar">
+            <BeginStoryboard Storyboard="{StaticResource StoryLeftToRight}" Name="ellipseStoryLeftToRightBegin"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+
+    <Grid Width="{Binding ElementName=metroProgressBar, Path=Width}">
+        <Ellipse Width="{Binding ElementName=metroProgressBar, Path=EllipseWidth}"
+                 Height="{Binding ElementName=metroProgressBar, Path=EllipseHeight}"
+                 HorizontalAlignment="Left"
+                 Fill="{Binding ElementName=metroProgressBar, Path=EllipseFillColor_1}"
+                 Name="e1" >
+            <Ellipse.Margin>
+                <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                    <Binding Path="EllipseLeftMargin_1" Mode="TwoWay"></Binding>
+                </MultiBinding>
+            </Ellipse.Margin>
+        </Ellipse>
+        <Ellipse Width="{Binding ElementName=metroProgressBar, Path=EllipseWidth}"
+                 Height="{Binding ElementName=metroProgressBar, Path=EllipseHeight}"
+                 HorizontalAlignment="Left"
+                 Fill="{Binding ElementName=metroProgressBar, Path=EllipseFillColor_2}"
+                 Name="e2">
+            <Ellipse.Margin>
+                <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                    <Binding Path="EllipseLeftMargin_2" Mode="TwoWay"></Binding>
+                </MultiBinding>
+            </Ellipse.Margin>
+        </Ellipse>
+        <Ellipse Width="{Binding ElementName=metroProgressBar, Path=EllipseWidth}"
+                 Height="{Binding ElementName=metroProgressBar, Path=EllipseHeight}"
+                 HorizontalAlignment="Left"
+                 Fill="{Binding ElementName=metroProgressBar, Path=EllipseFillColor_3}" Name="e3">
+            <Ellipse.Margin>
+                <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                    <Binding Path="EllipseLeftMargin_3" Mode="TwoWay"></Binding>
+                </MultiBinding>
+            </Ellipse.Margin>
+        </Ellipse>
+        <Ellipse Width="{Binding ElementName=metroProgressBar, Path=EllipseWidth}"
+                 Height="{Binding ElementName=metroProgressBar, Path=EllipseHeight}"
+                 HorizontalAlignment="Left"
+                 Fill="{Binding ElementName=metroProgressBar, Path=EllipseFillColor_4}" Name="e4">
+            <Ellipse.Margin>
+                <MultiBinding Converter="{StaticResource marginConverter}" Mode="TwoWay">
+                    <Binding Path="EllipseLeftMargin_4" Mode="TwoWay"></Binding>
+                </MultiBinding>
+            </Ellipse.Margin>
+        </Ellipse>
+    </Grid>
+
+</UserControl>

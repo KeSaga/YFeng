@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClassLibrary", "ClassLibrary", "{5B35C0E9-A5FC-4143-AA2A-7C46C25CA2D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "测试项目", "测试项目", "{8F24309D-2011-4259-B18B-78D645A705F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{1090A456-9AFD-4A72-91C3-DD7EB0D16414}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{A0895C7B-6EC7-47CD-BAE2-DA0471B601D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFControls", "WPFControls\WPFControls.csproj", "{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFCustomControls", "WPFCustomControls\WPFCustomControls.csproj", "{454C945E-C18C-48C2-A00E-412B8494814C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTest", "WpfTest\WpfTest.csproj", "{3DBEEE91-5118-4069-8F81-45AA78F7CBF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1090A456-9AFD-4A72-91C3-DD7EB0D16414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1090A456-9AFD-4A72-91C3-DD7EB0D16414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1090A456-9AFD-4A72-91C3-DD7EB0D16414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1090A456-9AFD-4A72-91C3-DD7EB0D16414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{454C945E-C18C-48C2-A00E-412B8494814C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454C945E-C18C-48C2-A00E-412B8494814C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{454C945E-C18C-48C2-A00E-412B8494814C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{454C945E-C18C-48C2-A00E-412B8494814C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBEEE91-5118-4069-8F81-45AA78F7CBF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBEEE91-5118-4069-8F81-45AA78F7CBF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBEEE91-5118-4069-8F81-45AA78F7CBF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBEEE91-5118-4069-8F81-45AA78F7CBF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A4F0E5A-EFD5-45AD-A7F9-0572409EA3ED} = {5B35C0E9-A5FC-4143-AA2A-7C46C25CA2D5}
+		{1090A456-9AFD-4A72-91C3-DD7EB0D16414} = {8F24309D-2011-4259-B18B-78D645A705F3}
+		{1BECE0AC-1AA4-488C-9ADF-32DC33A1B999} = {A0895C7B-6EC7-47CD-BAE2-DA0471B601D1}
+		{454C945E-C18C-48C2-A00E-412B8494814C} = {A0895C7B-6EC7-47CD-BAE2-DA0471B601D1}
+		{3DBEEE91-5118-4069-8F81-45AA78F7CBF1} = {8F24309D-2011-4259-B18B-78D645A705F3}
+	EndGlobalSection
+EndGlobal

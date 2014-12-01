@@ -1,0 +1,13 @@
+E:\VS2013Work\Myself\YFeng\ClassLibrary\bin\Debug\ClassLibrary.dll
+E:\VS2013Work\Myself\YFeng\ClassLibrary\bin\Debug\ClassLibrary.pdb
+E:\VS2013Work\Myself\YFeng\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+E:\VS2013Work\Myself\YFeng\ClassLibrary\obj\Debug\ClassLibrary.dll
+E:\VS2013Work\Myself\YFeng\ClassLibrary\obj\Debug\ClassLibrary.pdb
+H:\其他\YFeng\ClassLibrary\bin\Debug\ClassLibrary.dll
+H:\其他\YFeng\ClassLibrary\bin\Debug\ClassLibrary.pdb
+H:\其他\YFeng\ClassLibrary\obj\Debug\ClassLibrary.dll
+H:\其他\YFeng\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\YFeng\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\YFeng\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Administrator\Desktop\YFeng\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Administrator\Desktop\YFeng\ClassLibrary\obj\Debug\ClassLibrary.pdb

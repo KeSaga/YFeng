@@ -1,0 +1,14 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WPFControls="clr-namespace:WPFControls;assembly=WPFControls"
+    xmlns:MetroProgressBarCtr="clr-namespace:WPFControls.MetroProgressBarCtr;assembly=WPFControls"
+    xmlns:ProgressBar="clr-namespace:WPFControls.ProgressBar;assembly=WPFControls"
+    x:Class="WpfTest.MainWindow"
+    Title="MainWindow" Height="350" Width="422">
+
+    <Grid>
+        <MetroProgressBarCtr:MetroProgressBar_LTRE Height="53" VerticalAlignment="Top" TimeInterval="0.6" Width="Auto"/>
+        <ProgressBar:ProgressBar HorizontalAlignment="Left" Height="24" Margin="0,126,0,0" VerticalAlignment="Top" Width="414" TimeInvterval="0.6"/>
+    </Grid>
+</Window>
