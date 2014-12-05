@@ -4,7 +4,7 @@
 library
 C#
 .cs
-C:\Users\Administrator\Desktop\YFeng\WPFCustomControls\obj\Debug\
+D:\VS2013TestSpace\YFeng\WPFCustomControls\obj\Debug\
 WPFCustomControls
 none
 false
@@ -16,5 +16,5 @@ DEBUG;TRACE
 12-114506869
 Themes\Generic.xaml;
 
-False
+True
 

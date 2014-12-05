@@ -48,6 +48,9 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlTemplates\TableTreeViewItemCtrTmp.xaml.cs">
+      <DependentUpon>TableTreeViewItemCtrTmp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MetroProgressBarCtr\MetroProgressBar_LTRE.xaml.cs">
       <DependentUpon>MetroProgressBar_LTRE.xaml</DependentUpon>
     </Compile>
@@ -81,6 +84,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="ControlTemplates\TableTreeViewItemCtrTmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataTemplates\ExpandListBoxItemDtTmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MetroProgressBarCtr\MetroProgressBar_LTRE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,7 +101,9 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
