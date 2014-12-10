@@ -24,7 +24,6 @@ C:\Users\Administrator\Desktop\YFeng\WPFControls\obj\Debug\WPFControls.dll
 C:\Users\Administrator\Desktop\YFeng\WPFControls\obj\Debug\WPFControls.pdb
 D:\VS2013TestSpace\YFeng\WPFControls\bin\Debug\WPFControls.dll
 D:\VS2013TestSpace\YFeng\WPFControls\bin\Debug\WPFControls.pdb
-D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.csprojResolveAssemblyReference.cache
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\ControlTemplates\TableTreeViewItemCtrTmp.baml
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\DataTemplates\ExpandListBoxItemDtTmp.baml
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\ProgressBar\ProgressBar.baml

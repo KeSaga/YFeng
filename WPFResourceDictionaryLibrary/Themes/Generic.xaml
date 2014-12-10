@@ -1,0 +1,17 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WPFResourceDictionaryLibrary">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!--如果资源字典在其他目录下，则必须按照如下方式书写，否则在使用时会提示“设置 Source 属性时出现异常”的错误-->
+        <ResourceDictionary Source="WPFResourceDictionaryLibrary;component/DataTemplates/ExpandListBoxItemDtTmp.xaml"/>
+        <ResourceDictionary Source="WPFResourceDictionaryLibrary;component/ButtonBackgroundDic.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--<DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type local:CustomResources}, ResourceId=ExpandListBoxItemDtTmp}"/>-->
+
+    <!--<SolidColorBrush x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type local:CustomResources},ResourceId=btnSkyBlue}">
+    </SolidColorBrush>-->
+
+</ResourceDictionary>

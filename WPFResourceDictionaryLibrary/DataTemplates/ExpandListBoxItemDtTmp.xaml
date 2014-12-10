@@ -1,0 +1,175 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WPFResourceDictionaryLibrary"
+                    >
+
+    <!--设置边框、背景在不同状态下的颜色-->
+    <SolidColorBrush x:Key="HighlightBackground" Color="LightSkyBlue" Opacity="0.5"/>
+    <SolidColorBrush x:Key="Background" Color="SkyBlue"/>
+    <SolidColorBrush x:Key="DefaultBackground"
+                     Color="{Binding RelativeSource={
+        RelativeSource
+        Mode=FindAncestor,
+        AncestorType={x:Type ListBoxItem}
+        },
+        Path=Background}"/>
+    <SolidColorBrush x:Key="BorderBrush" Color="DeepSkyBlue"/>
+    <!--设置 ListBoxItem 被选中后的标题字体（标题控件 TextBlock 的字体）-->
+    <Style x:Key="TitleSelectedFontWeight">
+        <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+    </Style>
+    <!--设置 ListBoxItem 的 Border 的样式-->
+    <Style x:Key="ListBoxItemBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ResourceKey=BorderBrush}"/>
+        <Setter Property="Background" Value="{StaticResource ResourceKey=DefaultBackground}"/>
+        <Setter Property="CornerRadius" Value="3"/>
+    </Style>
+
+    <DataTemplate x:Key="{ComponentResourceKey
+        TypeInTargetAssembly={x:Type local:CustomResources},
+        ResourceId=ExpandListBoxItemDataTemplate
+        }">
+        <Grid Background="{Binding RelativeSource={
+        RelativeSource
+        Mode=FindAncestor,
+        AncestorType={x:Type ListBox}
+        },
+        Path=Background}">
+            <Grid.Style>
+                <Style>
+                    <Setter Property="TextBlock.Foreground" Value="Black"/>
+                </Style>
+            </Grid.Style>
+
+            <!--Border-->
+            <Border x:Name="Bd" Style="{StaticResource ResourceKey=ListBoxItemBorderStyle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <!--用于选择当前 ListBoxItem 的CheckBox（当允许删除选中项时使用）-->
+                    <CheckBox x:Name="ChkBox"
+                              Margin="3"
+                              Visibility="Collapsed"
+                              VerticalAlignment="Center"
+                              IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent},Path=IsSelected}"
+                              Grid.Row="0"
+                              Grid.Column="0"/>
+                    <!--ListBoxItem 内容浏览框-->
+                    <TextBlock x:Name="TBlockTitle"
+                               VerticalAlignment="Center"
+                               Grid.Row="0"
+                               Grid.Column="1"
+                               Margin="1"
+                               Visibility="Visible"
+                               Text="{Binding ObjectName}"/>
+                    <!--ListBoxItem 内容编辑框-->
+                    <TextBox x:Name="TBoxTitle"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Margin="1"
+                             Visibility="Collapsed"
+                             Text="{Binding ObjectName}"/>
+
+                    <!--显示描述内容-->
+                    <StackPanel x:Name="StcPanel"
+                                MaxWidth="{Binding ElementName=TBlockTitle,Path=ActualWidth}"
+                                Visibility="Collapsed"
+                                Grid.Row="1"
+                                Grid.Column="1">
+                        <!--描述信息浏览框-->
+                        <ScrollViewer x:Name="ScrViewer"
+                                      Margin="1"
+                                      Height="60"
+                                      VerticalScrollBarVisibility="Auto">
+                            <TextBlock x:Name="TBlockDescription"
+                                       FontStyle="Italic"
+                                       Text="{Binding Description}"
+                                       TextWrapping="Wrap"/>
+                        </ScrollViewer>
+                        <!--描述信息编辑框-->
+                        <TextBox x:Name="TBoxDescription"
+                                 Margin="1"
+                                 Height="{Binding ElementName=ScrViewer,Path=Height}"
+                                 FontStyle="Italic"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Visibility="Collapsed"
+                                 Text="{Binding Description}"
+                                 TextWrapping="Wrap"/>
+                        <!--编辑选项：
+                        1、是否编辑应由是否选择“编辑”来决定，不应由是否选中 ListBoxItem 决定；
+                        2、当 ChkBoxEdite 可见时默认为未选中状态，即：IsChecked=False
+                        3、需要在“编辑”功能可用时才可操作是否“编辑”当前 ListBoxItem，
+                        因此，当取消 ListBoxItem 的选中状态时必须恢复 ChkBoxEdite 的 IsChecked 属性为 False
+                        -->
+                        <CheckBox x:Name="ChkBoxEdite"
+                                  Margin="3"
+                                  Visibility="Collapsed"
+                                  HorizontalAlignment="Right"
+                                  Content="编辑"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <DataTemplate.Triggers>
+            <!--鼠标经过时高亮显示-->
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background"
+                        TargetName="Bd"
+                        Value="{StaticResource HighlightBackground}"/>
+            </Trigger>
+            <!--编辑时各内部控件项状态-->
+            <DataTrigger Binding="{Binding ElementName=ChkBoxEdite,Path=IsChecked}" Value="true">
+                <Setter TargetName="TBoxTitle" Property="Visibility" Value="Visible"/>
+                <Setter TargetName="TBlockTitle" Property="Visibility" Value="Collapsed"/>
+                <Setter TargetName="TBoxDescription" Property="Visibility" Value="Visible"/>
+                <Setter TargetName="ScrViewer" Property="Visibility" Value="Collapsed"/>
+                <Setter TargetName="StcPanel"
+                        Property="MaxWidth"
+                        Value="{Binding ElementName=TBoxTitle,Path=ActualWidth}"/>
+            </DataTrigger>
+            <!--选中 ListBoxItem 时的效果-->
+            <DataTrigger Binding="{Binding
+                RelativeSource=
+                {
+                RelativeSource
+                Mode=FindAncestor,
+                AncestorType={x:Type ListBoxItem}
+                },
+                Path=IsSelected}"
+                         Value="True">
+                <!--TBlockTitle-->
+                <Setter TargetName="Bd"
+                        Property="Background"
+                        Value="{StaticResource ResourceKey=Background}"/>
+                <Setter TargetName="TBlockTitle"
+                        Property="Style"
+                        Value="{StaticResource ResourceKey=TitleSelectedFontWeight}"/>
+                <Setter TargetName="StcPanel"
+                        Property="Visibility"
+                        Value="Visible"/>
+            </DataTrigger>
+            <!--取消 ListBoxItem 的选中恢复为非编辑状态-->
+            <DataTrigger Binding="{Binding
+                RelativeSource=
+                {
+                RelativeSource
+                Mode=FindAncestor,
+                AncestorType={x:Type ListBoxItem}
+                },
+                Path=IsSelected}"
+                         Value="False">
+                <Setter TargetName="ChkBoxEdite" Property="IsChecked" Value="False"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+
+</ResourceDictionary>

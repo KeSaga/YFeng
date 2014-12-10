@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
+             xmlns:res="clr-namespace:WPFResourceDictionaryLibrary;assembly=WPFResourceDictionaryLibrary"
              d:DesignHeight="480" d:DesignWidth="640">
 
     <UserControl.Resources>
@@ -108,6 +109,7 @@
             <Button Name="btnAddValue"
                     Grid.Row="1"
                     Content="添加"
+                    Background="{DynamicResource {x:Static res:CustomResources.BtnBackgound_SkyBlue}}"
                     HorizontalAlignment="Right"
                     Margin="0,4,5,4"
                     Width="75"
@@ -126,6 +128,13 @@
                      BorderThickness="0,1,1,1"
                      Margin="0"
                      Grid.Row="3"
+                     ItemTemplate="{DynamicResource
+                {
+                ComponentResourceKey
+                TypeInTargetAssembly={x:Type res:CustomResources},
+                ResourceId=ExpandListBoxItemDataTemplate
+                }
+                }"
                      Background="SkyBlue"/>
             <!--ItemTemplate="{StaticResource ExpandListBoxItemDataTemplate}"/>-->
             <Grid Name="grdValuesEdit" Grid.Row="2" Margin="0" Background="White" Visibility="Collapsed">

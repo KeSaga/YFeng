@@ -27,15 +27,16 @@ namespace WpfTest
             resourceDic.Source = new Uri(
                 "WPFControls;component/DataTemplates/ExpandListBoxItemDtTmp.xaml", UriKind.Relative);
             this.ltBoxDataSource.ItemTemplate = (DataTemplate)resourceDic["ExpandListBoxItemDataTemplate"];
-            this.ltBoxValues.ItemTemplate = (DataTemplate)resourceDic["ExpandListBoxItemDataTemplate"];
+            //this.ltBoxValues.ItemTemplate = (DataTemplate)resourceDic["ExpandListBoxItemDataTemplate"];
 
-            HAHA h = new HAHA();
-            h.ObjectName = "ads";
-            h.Description = "uiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsauiuiasdnsoihsa";
-            List<HAHA> HL = new List<HAHA>();
+            WPFTestDataObject dtObj = new WPFTestDataObject();
+            dtObj.ObjectName = "WPFTestDataObject";
+            dtObj.Description = "测试用数据对象";
+            List<WPFTestDataObject> HL = new List<WPFTestDataObject>();
             for (int i = 0; i < 2; i++)
-                HL.Add(h);
+                HL.Add(dtObj);
             this.ltBoxDataSource.ItemsSource = HL;
+            this.ltBoxValues.ItemsSource = HL;
         }
 
         private void btnDataSourcesEdit_Click(object sender, RoutedEventArgs e)

@@ -42,3 +42,5 @@ D:\VS2013TestSpace\YFeng\WpfTest\bin\Debug\WpfTest.pdb
 D:\VS2013TestSpace\YFeng\WpfTest\bin\Debug\WPFControls.dll
 D:\VS2013TestSpace\YFeng\WpfTest\bin\Debug\WPFControls.pdb
 D:\VS2013TestSpace\YFeng\WpfTest\obj\Debug\WpfTest.pdb
+D:\VS2013TestSpace\YFeng\WpfTest\bin\Debug\WPFResourceDictionaryLibrary.dll
+D:\VS2013TestSpace\YFeng\WpfTest\bin\Debug\WPFResourceDictionaryLibrary.pdb
