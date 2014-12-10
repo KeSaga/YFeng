@@ -4,7 +4,9 @@
     xmlns:local="clr-namespace:WPFResourceDictionaryLibrary">
 
     <ResourceDictionary.MergedDictionaries>
-        <!--如果资源字典在其他目录下，则必须按照如下方式书写，否则在使用时会提示“设置 Source 属性时出现异常”的错误-->
+        <!--该资源是要使用在其他程序集中，因此使用下面的 pack URI 语法在其他程序访问该资源时才能正常运行。语法格式： 
+        （相对URI：AssemblyName;component/ResourceName）和
+        （绝对URI：pack://application:,,,/AssemblyName;component/ResourceName）等效-->
         <ResourceDictionary Source="WPFResourceDictionaryLibrary;component/DataTemplates/ExpandListBoxItemDtTmp.xaml"/>
         <ResourceDictionary Source="WPFResourceDictionaryLibrary;component/ButtonBackgroundDic.xaml"/>
     </ResourceDictionary.MergedDictionaries>
