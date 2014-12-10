@@ -9,9 +9,4 @@
         <ResourceDictionary Source="WPFResourceDictionaryLibrary;component/ButtonBackgroundDic.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
-    <!--<DataTemplate x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type local:CustomResources}, ResourceId=ExpandListBoxItemDtTmp}"/>-->
-
-    <!--<SolidColorBrush x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type local:CustomResources},ResourceId=btnSkyBlue}">
-    </SolidColorBrush>-->
-
 </ResourceDictionary>
