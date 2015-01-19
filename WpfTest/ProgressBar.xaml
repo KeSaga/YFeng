@@ -4,8 +4,8 @@
     xmlns:WPFControls="clr-namespace:WPFControls;assembly=WPFControls"
     xmlns:MetroProgressBarCtr="clr-namespace:WPFControls.MetroProgressBarCtr;assembly=WPFControls"
     xmlns:ProgressBar="clr-namespace:WPFControls.ProgressBar;assembly=WPFControls"
-    x:Class="WpfTest.MainWindow"
-    Title="MainWindow" Height="350" Width="422">
+    x:Class="WpfTest.ProgressBar"
+    Title="ProgressBar" Height="350" Width="422">
 
     <Grid>
         <MetroProgressBarCtr:MetroProgressBar_LTRE Height="53" VerticalAlignment="Top" TimeInterval="0.6" Width="Auto"/>

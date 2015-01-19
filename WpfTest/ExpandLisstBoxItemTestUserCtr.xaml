@@ -70,7 +70,7 @@
                      BorderThickness="1,1,0,1"
                      Margin="0"
                      Grid.Row="3">
-                     <!--ItemTemplate="{StaticResource ExpandListBoxItemDataTemplate}">-->
+                <!--ItemTemplate="{StaticResource ExpandListBoxItemDataTemplate}">-->
             </ListBox>
             <Grid Name="grdDataSourcesEdit" Grid.Row="2" Margin="0" Background="White" Visibility="Collapsed">
                 <Grid.RowDefinitions>
@@ -128,14 +128,15 @@
                      BorderThickness="0,1,1,1"
                      Margin="0"
                      Grid.Row="3"
-                     ItemTemplate="{DynamicResource
+                     
+                     Background="SkyBlue"/>
+            <!--ItemTemplate="{DynamicResource
                 {
                 ComponentResourceKey
                 TypeInTargetAssembly={x:Type res:CustomResources},
                 ResourceId=ExpandListBoxItemDataTemplate
                 }
-                }"
-                     Background="SkyBlue"/>
+                }"-->
             <!--ItemTemplate="{StaticResource ExpandListBoxItemDataTemplate}"/>-->
             <Grid Name="grdValuesEdit" Grid.Row="2" Margin="0" Background="White" Visibility="Collapsed">
                 <Grid.RowDefinitions>

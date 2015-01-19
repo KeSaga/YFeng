@@ -26,8 +26,23 @@ namespace WpfTest
             ResourceDictionary resourceDic = new ResourceDictionary();
             resourceDic.Source = new Uri(
                 "WPFControls;component/DataTemplates/ExpandListBoxItemDtTmp.xaml", UriKind.Relative);
+            Style style = (Style)resourceDic["MultipleSelectedCheckBox"];
+            if (style != null)
+            {
+                Setter st = style.Setters.FirstOrDefault() as Setter;
+                if (st != null) st.Value = Visibility.Visible;
+            }
             this.ltBoxDataSource.ItemTemplate = (DataTemplate)resourceDic["ExpandListBoxItemDataTemplate"];
-            //this.ltBoxValues.ItemTemplate = (DataTemplate)resourceDic["ExpandListBoxItemDataTemplate"];
+            ResourceDictionary resourceDic1 = new ResourceDictionary();
+            resourceDic1.Source = new Uri(
+                "WPFControls;component/DataTemplates/ExpandListBoxItemDtTmp.xaml", UriKind.Relative);
+            Style style1 = (Style)resourceDic1["MultipleSelectedCheckBox"];
+            if (style1 != null)
+            {
+                Setter st = style1.Setters.FirstOrDefault() as Setter;
+                if (st != null) st.Value = Visibility.Collapsed;
+            }
+            this.ltBoxValues.ItemTemplate = (DataTemplate)resourceDic1["ExpandListBoxItemDataTemplate"];
 
             WPFTestDataObject dtObj = new WPFTestDataObject();
             dtObj.ObjectName = "WPFTestDataObject";
@@ -89,12 +104,6 @@ namespace WpfTest
 
         }
 
-    }
-
-    public class HAHA
-    {
-        public string ObjectName { get; set; }
-        public string Description { get; set; }
     }
 
 }

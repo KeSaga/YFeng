@@ -39,3 +39,8 @@ D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.Properties.Resources.
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.csproj.GenerateResource.Cache
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.dll
 D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.pdb
+D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\WPFControls.csprojResolveAssemblyReference.cache
+D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\ObjectEditor.baml
+D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\ObjectEditor.g.cs
+D:\VS2013TestSpace\YFeng\WPFControls\bin\Debug\WPFResourceDictionaryLibrary.dll
+D:\VS2013TestSpace\YFeng\WPFControls\bin\Debug\WPFResourceDictionaryLibrary.pdb

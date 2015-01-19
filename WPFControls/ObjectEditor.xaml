@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="WPFControls.ObjectEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:res="clr-namespace:WPFResourceDictionaryLibrary;assembly=WPFResourceDictionaryLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Loaded="objEditor_Loaded"
+             Name="objEditor">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="29"/>
+            <RowDefinition Height="29"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="29"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtBlockTitle"
+                   Margin="5"
+                   Text="{Binding ElementName=objEditor, Path=ObjectTitle}"
+                   Foreground="Black"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"/>
+        <Button Name="btnSearch"
+                    Grid.Row="1"
+                    Content="搜索"
+                    Margin="0,4,85,4"
+                    HorizontalAlignment="Right"
+                    Width="75" Click="btnSearch_Click"/>
+        <Button Name="btnAdd"
+                    Grid.Row="1"
+                    Content="添加"
+                    HorizontalAlignment="Right"
+                    Margin="0,4,5,4"
+                    Width="75" Click="btnAdd_Click"/>
+        <ComboBox Name="cmbBoxObjects"
+                  Grid.Row="1"
+                  Margin="5,4,165,4"
+                  Height="21"
+                  VerticalAlignment="Center"
+                  IsEditable="True"/>
+        <Button Name="btnDelete"
+                Content="删除选中项"
+                Visibility="{Binding ElementName=objEditor,Path=CheckBoxVisibility}"
+                HorizontalAlignment="Right"
+                Margin="0,3,5,4"
+                Grid.Row="4"
+                Width="75"
+                Click="btnDelete_Click"/>
+        <ListBox Name="ltBoxObject"
+                 HorizontalContentAlignment="Stretch"
+                 SnapsToDevicePixels="True"
+                 BorderThickness="1,1,0,1"
+                 Margin="0"
+                 Grid.Row="3"
+                 Background="{Binding ElementName=objEditor,Path=BoxBackground}"
+                 ItemTemplate="{DynamicResource {x:Static res:CustomResources.ExpandListBoxItemDataTemplate}}">
+        </ListBox>
+        <Grid Name="grdEdit" Grid.Row="2" Margin="0" Background="White" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtBlock"
+                       Text="值："
+                       Margin="5"
+                       VerticalAlignment="Top"/>
+            <TextBox Name="txtBox"
+                     Grid.Column="1"
+                     Margin="5,5,5,5"/>
+            <TextBlock Name="txtBlockDescription"
+                       Grid.Row="1"
+                       Margin="5"
+                       Text="描述："
+                       VerticalAlignment="Top"/>
+            <TextBox Name="txtBoxDescription"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="5,5,5,5"
+                     TextWrapping="Wrap"
+                     VerticalScrollBarVisibility="Auto"
+                     Height="44"/>
+            <Button Name="btnOK"
+                    Height="22"
+                    Content="确定"
+                    HorizontalAlignment="Right"
+                    Margin="3"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Click="btnOK_Click"/>
+        </Grid>
+    </Grid>
+</UserControl>

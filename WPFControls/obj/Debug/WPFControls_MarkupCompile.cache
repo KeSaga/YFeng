@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 
-41027697382
+5-610520747
 
-92104837752
-121654848548
-ControlTemplates\TableTreeViewItemCtrTmp.xaml;DataTemplates\ExpandListBoxItemDtTmp.xaml;MetroProgressBarCtr\MetroProgressBar_LTRE.xaml;ProgressBar\ProgressBar.xaml;
+11954226205
+1493820410
+ControlTemplates\TableTreeViewItemCtrTmp.xaml;DataTemplates\ExpandListBoxItemDtTmp.xaml;MetroProgressBarCtr\MetroProgressBar_LTRE.xaml;ObjectEditor.xaml;ProgressBar\ProgressBar.xaml;
 
 False
 

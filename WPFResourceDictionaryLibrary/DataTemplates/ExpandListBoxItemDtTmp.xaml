@@ -54,7 +54,8 @@
                         <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <!--用于选择当前 ListBoxItem 的CheckBox（当允许删除选中项时使用）-->
+                    <!--用于选择当前 ListBoxItem 的CheckBox（当允需要多选时使用，此时需要同时设置 ListBox
+                    的 SelectionMode 属性为 Multiple 以允许多项选择）-->
                     <CheckBox x:Name="ChkBox"
                               Margin="3"
                               Visibility="Collapsed"
