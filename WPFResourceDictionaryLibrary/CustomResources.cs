@@ -13,6 +13,9 @@ namespace WPFResourceDictionaryLibrary
             get { return new ComponentResourceKey(typeof(CustomResources), "ExpandListBoxItemDataTemplate"); }
         }
 
+        /// <summary>
+        /// 属性名不必与 ComponentResourceKey 的 resourceId 相同
+        /// </summary>
         public static ComponentResourceKey BtnBackgound_SkyBlue
         {
             get { return new ComponentResourceKey(typeof(CustomResources), "BtnBackgound_SkyBlue"); }
