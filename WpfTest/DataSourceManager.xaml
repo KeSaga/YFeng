@@ -21,7 +21,7 @@
                                         HorizontalAlignment="Stretch"
                                         ObjectTitle="数据源"
                                         Margin="0"
-                                        SnapsToDevicePixels="True"/>
+                                        SnapsToDevicePixels="True" SelectionMode="Multiple"/>
         <WPFControls:ObjectEditor x:Name="objEditorValue"
                                         Grid.Column="1"
                                         ObjectTitle="值"

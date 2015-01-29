@@ -16,5 +16,5 @@ DEBUG;TRACE
 1493820410
 ControlTemplates\TableTreeViewItemCtrTmp.xaml;DataTemplates\ExpandListBoxItemDtTmp.xaml;MetroProgressBarCtr\MetroProgressBar_LTRE.xaml;ObjectEditor.xaml;ProgressBar\ProgressBar.xaml;
 
-True
+False
 

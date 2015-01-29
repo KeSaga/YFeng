@@ -34,6 +34,17 @@ namespace WPFControls.UIDataEntity
             }
         }
 
+        private bool _isEditable = false;
+        public bool IsEditable
+        {
+            get { return this._isEditable; }
+            set
+            {
+                this._isEditable = value;
+                this.OnPropertyChanged("IsEditable");
+            }
+        }
+
         #region 接口 INotifyPropertyChanged 的实现
 
         public event PropertyChangedEventHandler PropertyChanged;

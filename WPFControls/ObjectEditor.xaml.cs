@@ -26,16 +26,6 @@ namespace WPFControls
             InitializeComponent();
 
             this.DataContext = this;
-
-            this.InitializeCheckBoxStyle((Style)this.TryFindResource("MultipleSelectedCheckBox"), this._checkBoxVisibility);
-            this.InitializeCheckBoxStyle((Style)this.TryFindResource("EditCheckBox"), this._editeCheckBoxVisibility);
-
-            if (this._checkBoxVisibility == Visibility.Visible)
-            {
-                this.ltBoxObject.SelectionMode = SelectionMode.Multiple;
-            }
-
-            //this.ltBoxObject.ItemsSource = this._editeObjects;
         }
 
         static ObjectEditor()
@@ -86,29 +76,15 @@ namespace WPFControls
 
         //---------------以上是依赖项属性的定义----------------------
 
-        private Visibility _checkBoxVisibility = Visibility.Visible;
         /// <summary>
-        /// 设置复选框的显示状态
-        /// （用于设置是否可以对列表框中的项进行多项选择）
+        /// 获取或设置列表框的选择行为
         /// </summary>
-        [Description("设置 复选框 的显示状态（用于设置是否可以对列表框中的项进行多项选择）")]
+        [Description("获取或设置列表框的选择行为")]
         [Browsable(true)]
-        public Visibility CheckBoxVisibility
+        public SelectionMode SelectionMode
         {
-            get { return this._checkBoxVisibility; }
-            set { this._checkBoxVisibility = value; }
-        }
-
-        private Visibility _editeCheckBoxVisibility = Visibility.Collapsed;
-        /// <summary>
-        /// 设置项的编辑功能是否可用
-        /// </summary>
-        [Description("设置 项 的编辑功能是否可用")]
-        [Browsable(true)]
-        public Visibility EditeCheckBoxVisibility
-        {
-            get { return this._editeCheckBoxVisibility; }
-            set { this._editeCheckBoxVisibility = value; }
+            get { return this.ltBoxObject.SelectionMode; }
+            set { this.ltBoxObject.SelectionMode = value; }
         }
 
         #endregion End 属性
@@ -118,15 +94,6 @@ namespace WPFControls
         #endregion End Public Methods
 
         #region Private Methods
-
-        private void InitializeCheckBoxStyle(Style stl, object objValue)
-        {
-            if (stl != null)
-            {
-                Setter firstSetter = stl.Setters.FirstOrDefault() as Setter;
-                if (firstSetter != null) firstSetter.Value = objValue;
-            }
-        }
 
         private void DeleteSelectedItems()
         {

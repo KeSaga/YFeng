@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WPFResourceDictionaryLibrary"
+                    xmlns:valConvert="clr-namespace:WPFResourceDictionaryLibrary.ValueConverters"
                     >
 
     <!--设置边框、背景在不同状态下的颜色-->
@@ -26,6 +27,8 @@
         <Setter Property="Background" Value="{StaticResource ResourceKey=DefaultBackground}"/>
         <Setter Property="CornerRadius" Value="3"/>
     </Style>
+
+    <valConvert:BooleanValueConverter x:Key="boolValueCvt"></valConvert:BooleanValueConverter>
 
     <DataTemplate x:Key="{ComponentResourceKey
         TypeInTargetAssembly={x:Type local:CustomResources},
@@ -112,7 +115,7 @@
                         -->
                         <CheckBox x:Name="ChkBoxEdite"
                                   Margin="3"
-                                  Visibility="Collapsed"
+                                  Visibility="{Binding IsEditable,Converter={StaticResource boolValueCvt},ConverterParameter=Visible, FallbackValue=Collapsed}"
                                   HorizontalAlignment="Right"
                                   Content="编辑"/>
                     </StackPanel>
@@ -127,6 +130,11 @@
                         TargetName="Bd"
                         Value="{StaticResource HighlightBackground}"/>
             </Trigger>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType={x:Type ListBox}},Path=SelectionMode}" Value="Multiple">
+                <Setter Property="Visibility"
+                        TargetName="ChkBox"
+                        Value="Visible"/>
+            </DataTrigger>
             <!--编辑时各内部控件项状态-->
             <DataTrigger Binding="{Binding ElementName=ChkBoxEdite,Path=IsChecked}" Value="true">
                 <Setter TargetName="TBoxTitle" Property="Visibility" Value="Visible"/>

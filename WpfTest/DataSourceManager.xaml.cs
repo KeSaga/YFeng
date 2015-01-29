@@ -27,7 +27,8 @@ namespace WpfTest
                 new EditeObject()
                 {
                     ObjectName="测试对象1",
-                    Description="测试描述1"
+                    Description="测试描述1",
+                    IsEditable=true
                 }
             };
         }
