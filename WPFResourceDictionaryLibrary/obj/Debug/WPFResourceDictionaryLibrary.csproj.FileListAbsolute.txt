@@ -1,0 +1,13 @@
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\DataTemplates\ExpandListBoxItemDtTmp.baml
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary_MarkupCompile.cache
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary_MarkupCompile.lref
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary.dll
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary.pdb
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\bin\Debug\WPFResourceDictionaryLibrary.dll
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\bin\Debug\WPFResourceDictionaryLibrary.pdb
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\Themes\Generic.baml
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary.g.resources
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary.Properties.Resources.resources
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\WPFResourceDictionaryLibrary.csproj.GenerateResource.Cache
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\VS2013TestSpace\YFeng\WPFResourceDictionaryLibrary\obj\Debug\ButtonBackgroundDic.baml
