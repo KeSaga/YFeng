@@ -48,3 +48,5 @@ D:\VS2013TestSpace\YFeng\WpfTest\obj\Debug\ProgressBar.g.cs
 D:\VS2013TestSpace\YFeng\WpfTest\obj\Debug\Menu.g.cs
 D:\VS2013TestSpace\YFeng\WpfTest\obj\Debug\DataSourceManager.baml
 D:\VS2013TestSpace\YFeng\WpfTest\obj\Debug\DataSourceManager.g.cs
+E:\WorkSpace_Dev\VS2013TestSpace\YFeng\WpfTest\obj\Debug\WpfTest.exe
+E:\WorkSpace_Dev\VS2013TestSpace\YFeng\WpfTest\obj\Debug\WpfTest.pdb

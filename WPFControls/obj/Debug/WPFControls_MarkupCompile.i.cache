@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\VS2013TestSpace\YFeng\WPFControls\obj\Debug\
+E:\WorkSpace_Dev\VS2013TestSpace\YFeng\WPFControls\obj\Debug\
 WPFControls
 none
 false
@@ -13,7 +13,7 @@ DEBUG;TRACE
 5-610520747
 
 12-773455532
-1493820410
+1417398493
 ControlTemplates\TableTreeViewItemCtrTmp.xaml;DataTemplates\ExpandListBoxItemDtTmp.xaml;MetroProgressBarCtr\MetroProgressBar_LTRE.xaml;ObjectEditor.xaml;ProgressBar\ProgressBar.xaml;
 
 False
